@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:paddingLeft="10dp"
+            android:text="@string/text_search_cancel"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/search_value"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_edit_box_bg"
+            android:focusable="true"
+            android:layout_toLeftOf="@+id/search_btn"
+            android:hint="@string/search_tips_text"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textSize="14sp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:id="@+id/search_remove"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/search_btn"
+            android:visibility="gone"
+            android:src="@mipmap/remove"
+            android:layout_width="18dp"
+            android:layout_height="18dp"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/base_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEEEE" />
+
+</LinearLayout>

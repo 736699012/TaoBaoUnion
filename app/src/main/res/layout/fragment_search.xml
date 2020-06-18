@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:luffy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 历史记录 -->
+
+    <LinearLayout
+        android:id="@+id/history_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_search_history"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/search_history_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/delete_icon" />
+        </RelativeLayout>
+
+        <com.example.taobaounion.ui.custom.TextFlowLayout
+            android:id="@+id/search_history_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            luffy:horizontalSpace="6dp"
+            luffy:verticalSpace="6dp" />
+    </LinearLayout>
+    <!--  推荐词  -->
+    <LinearLayout
+        android:id="@+id/recommend_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/text_recommend_keywords"
+            android:textSize="14sp" />
+
+        <com.example.taobaounion.ui.custom.TextFlowLayout
+            android:id="@+id/search_recommend_keywords_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            luffy:horizontalSpace="6dp"
+            luffy:verticalSpace="6dp" />
+    </LinearLayout>
+    <!--  搜索结果  -->
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/search_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_result_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+</LinearLayout>

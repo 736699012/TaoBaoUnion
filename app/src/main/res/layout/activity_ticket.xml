@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.activity.TicketActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/ticket_back_press"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text_ticket"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="33dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+        <ImageView
+            android:id="@+id/ticket_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <com.example.taobaounion.ui.custom.LoadingView
+            android:id="@+id/ticket_loading"
+            android:layout_width="33dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/loading"
+            android:layout_height="33dp"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/ticket_error_text"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:text="@string/text_error_tips"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/ticket_tao_kou_ling"
+        android:layout_width="244dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_tao_box_bg"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/code_open_bt"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_bt_box_bg"
+        android:gravity="center"
+        android:text="@string/text_get_ticket"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>
